@@ -1,7 +1,9 @@
 # toss-doctor
 
-git clone git@dmednikov:dmednikov/toss-doctor.git
-git remote set-url origin git@dmednikov:dmednikov/toss-doctor.git
+#git clone git@dmednikov:dmednikov/toss-doctor.git
+#git remote set-url origin git@dmednikov:dmednikov/toss-doctor.git
+#git push -u origin master
+
 
 # Toss Doctor Astro Project - Basic Structure
 
