@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Global theme-friendly base styles */
+html, body {
+  @apply text-base-content bg-base-100;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
