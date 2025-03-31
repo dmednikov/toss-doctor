@@ -1,0 +1,30 @@
+---
+export interface Props {
+  story: {
+    id: string;
+    slug: string;
+    data: {
+      title: string;
+      date: string;
+      description: string;
+      image?: string;
+    };
+  };
+}
+const { story } = Astro.props;
+---
+
+<a href={`/stories/${story.slug}/`} class="card bg-base-100 shadow-xl hover:shadow-2xl transition">
+  {story.data.image && (
+    <figure>
+      <img src={story.data.image} alt={story.data.title} class="w-full object-cover h-48" />
+    </figure>
+  )}
+  <div class="card-body">
+    <h2 class="card-title">{story.data.title}</h2>
+    <p>{story.data.description}</p>
+    <div class="card-actions justify-end">
+      <small class="text-sm text-gray-500">{story.data.date}</small>
+    </div>
+  </div>
+</a>

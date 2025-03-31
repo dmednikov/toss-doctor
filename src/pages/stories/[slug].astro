@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, getEntryBySlug } from 'astro:content';
+
+export async function getStaticPaths() {
+  const stories = await getCollection('stories');
+  return stories.map((story) => ({
+    params: { slug: story.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const story = await getEntryBySlug('stories', slug);
+
+if (!story) {
+  throw new Error(`Story not found for slug: ${slug}`);
+}
+---
+<BaseLayout>
+  <article>
+    <h1>{story.data.title}</h1>
+    <p><small>{story.data.date}</small></p>
+    {story.data.image && <img src={story.data.image} alt={story.data.title} />}
+    <div innerHTML={story.body} />
+  </article>
+</BaseLayout>
+
+
+
+<style>
+  article {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+</style>
