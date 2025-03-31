@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Features">
+  <section class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold mb-10 text-center">Features</h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card bg-base-100 shadow-md">
+        <figure><img src="/images/cards/court_booking.png" alt="Controlled toss height" class="w-full h-48 object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Consistent toss height</h2>
+          <p>Creates and supports muscle memory for consistent toss height</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-md">
+        <figure><img src="/images/cards/membership_management.png" alt="Controlled release point" class="w-full h-48 object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Controlled release point</h2>
+          <p>Helps develop a consitent ball release point by adding an extending arm.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>
