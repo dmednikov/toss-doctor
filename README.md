@@ -7,6 +7,8 @@
 
 # Toss Doctor Astro Project - Basic Structure
 
+npm run dev
+
 # 1. Create new Astro project
 npm create astro@latest toss-doctor
 cd toss-doctor
