@@ -1,5 +1,6 @@
 ---
 import { Astro } from 'astro';
+import { SITE_TITLE } from '../config';
 ---
 
 <header class="navbar bg-base-100 shadow-md">
@@ -20,7 +21,7 @@ import { Astro } from 'astro';
       </ul>
     </div>
     <!-- Site title/logo -->
-    <a href="/" class="btn btn-ghost normal-case text-xl">Toss Doctor</a>
+    <a href="/" class="btn btn-ghost normal-case text-xl">{SITE_TITLE}</a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
