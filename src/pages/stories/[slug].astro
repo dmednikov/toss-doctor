@@ -21,7 +21,7 @@ if (!story) {
     <h1>{story.data.title}</h1>
     <p><small>{story.data.date}</small></p>
     {story.data.image && <img src={story.data.image} alt={story.data.title} />}
-    <div innerHTML={story.body} />
+    <div set:html={story.body} />
   </article>
 </BaseLayout>
 
